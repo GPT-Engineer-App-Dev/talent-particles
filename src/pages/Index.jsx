@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Box, Heading, Text, Input, Stack, Wrap, WrapItem, Avatar, Badge, Select, Container, Button } from "@chakra-ui/react";
+import MessageModal from "../components/MessageModal";
 
 const developers = [
   {
@@ -136,7 +137,10 @@ const Index = () => {
                     </WrapItem>
                   ))}
                 </Wrap>
-                <Button colorScheme="blue">View Profile</Button>
+                <Button colorScheme="blue" mb={4}>
+                  View Profile
+                </Button>
+                <MessageModal developerName={developer.name} />
               </Box>
             </WrapItem>
           ))}
